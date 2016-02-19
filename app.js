@@ -13,6 +13,9 @@ var routes = require('./routes/index');
 //Redes Sociales
 var streamTw = require('./routes/rs/streamingTwitter');
 
+//SVP Estadísticas
+var estValman = require('./routes/SVP/estadisticas/valman');
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -26,6 +29,8 @@ app.use('/', routes);
 //Redes Sociales
 app.use('/rs/streamingTwitter', streamTw);
 
+//SVP Estadisticas
+app.use('/SVP/estadisticas/valman', estValman);
 
 var count = 0;
 io.sockets.on('connection', function(socket){
