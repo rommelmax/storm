@@ -1,0 +1,140 @@
+doctype html
+html(lang='es')
+  meta(charset='utf-8')
+  title storm
+  link(rel="stylesheet", href="/stylesheets/main.css")
+  script(type='text/javascript', src="http://code.jquery.com/jquery-1.9.1.min.js")
+  script(src='/javascripts/socket.io.js') 
+body
+  .body
+  .grad
+  section#container(class="")
+      header.header.dark-bg
+        .toggle-nav
+          .icon-reorder.tooltips(data-placement='bottom', data-original-title='Toggle Navigation')
+            i.icon_menu
+        a.logo(href='#')
+          | Toll
+          span.lite Watch
+        .top-nav.notification-row
+          ul.nav.pull-right.top-menu
+            li#task_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.icon-task-l
+                span.badge.bg-important 6
+            li#mail_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.icon-envelope-l
+                span.badge.bg-important 5
+            li#alert_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                i.icon-bell-l
+                span.badge.bg-important 7
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.profile-ava
+                  img(alt='', src="/images/logo_ohl_small.ico")
+                span.username Rommel Ruiz
+                b.caret
+              ul.dropdown-menu.extended.logout
+                .log-arrow-up
+                li.eborder-top
+                  a(class="" href='#')
+                    i.icon_profile
+                    |  My Profile
+                li
+                  a(class="" href='#')
+                    i.icon_mail_alt
+                    |  My Inbox
+                li
+                  a(class="" href='#')
+                    i.icon_clock_alt
+                    |  Timeline
+                li
+                  a(class="" href='#')
+                    i.icon_chat_alt
+                    |  Chats
+                li
+                  a(class="" href='login.html')
+                    i.icon_key_alt
+                    |  Log Out
+      aside
+        #sidebar.nav-collapse
+          ul.sidebar-menu
+            li.active
+              a(class="" href='' class="")
+                i.icon_house_alt
+                span Dashboard
+            li.sub-menu
+              a(class="" href='javascript:;' class="")
+                i.icon_documents_alt
+                span Televía
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(class="" href='form_component.html') Reportes
+                li
+                  a(class="" href='form_validation.html') Estadisticas
+            li.sub-menu
+              a(class="" href='javascript:;' class="")
+                i.icon_documents_alt
+                span SVP
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(class="" href='form_component.html') Reportes
+                li
+                  a(class="" href='form_validation.html') Estadisticas
+            li.sub-menu
+              a(class="" href='javascript:;' class="")
+                i.icon_documents_alt
+                span VB
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(class="" href='form_component.html') Reportes
+                li
+                  a(class="" href='form_validation.html') Estadisticas
+            li.sub-menu
+              a(class="" href='javascript:;' class="")
+                i.icon_documents_alt
+                span AUN
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(class="" href='form_component.html') Reportes
+                li
+                  a(class="" href='form_validation.html') Estadisticas
+            li.sub-menu
+              a(class="" href='javascript:;' class="")
+                i.icon_documents_alt
+                span Operación
+                span.menu-arrow.arrow_carrot-right
+              ul.sub
+                li
+                  a(class="" href='form_component.html') Reportes
+                li
+                  a(class="" href='form_validation.html') Estadisticas
+      section#main-content
+        section.wrapper
+          .row
+            .col-lg-12
+              h3.page-header
+                i.fa.fa-laptop
+                |               Dashboard
+              ol.breadcrumb
+                li
+                  i.fa.fa-home
+                  a(href='#') Home
+                li
+                  i.fa.fa-laptop
+                  |                 Dashboard
+          .row
+            .col-lg-12
+              block content
+  script(src='/javascripts/jquery-1.8.3.min.js')
+  script(src='/javascripts/bootstrap.min.js')
+  script(src='/javascripts/jquery.scrollTo.min.js')
+  script(src='/javascripts/jquery.nicescroll.js')
+  script(src='/javascripts/jquery.slimscroll.min.js')
+  script(src='/javascripts/scripts.js')

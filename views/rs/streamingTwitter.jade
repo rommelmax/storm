@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+  table.table
+    thead
+      tr
+        th Avatar
+        th Usuario
+        th Siguiendo / Seguidores
+        th Twit
+        th Fecha de Twit
+        th Ubicación
+    tbody#stwit
+  script(type='text/javascript').
+    var socket = io.connect('http://10.6.50.142:3000');
+    jQuery(function($){
+      var twittedList = $('#stwit');
+      socket.on('stwitter', function(tweet){
+        $('<img class="twitted__image"/>')
+          .attr('src',tweet.avatar)
+          .load(function(){
+            twittedList
+              .prepend($('<tr>')
+              .prepend($('<td>').text(tweet.ubicacion))
+              .prepend($('<td>').text(tweet.creacion))
+              .prepend($('<td>').text(tweet.text))
+              .prepend($('<td>').text(tweet.siguiendo + ' / ' + tweet.seguidores))
+              .prepend($('<td>').text(tweet.user))
+              .prepend($(this)))
+          })
+      });
+    });

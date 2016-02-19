@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1 Storm Web
+	h2 Número de usuarios conectados
+	p#count
+	script.
+		var socket = io.connect('http://10.6.50.142:3000');
+		var count = document.getElementById('count');
+		socket.on('users', function(data){
+			console.log('Actualizando dedes el servidor');
+			console.log('Hay' + data.number + 'usuarios');
+			count.innerHTML = data.number;
+		});
